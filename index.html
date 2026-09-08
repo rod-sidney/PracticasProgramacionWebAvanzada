@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Detalle de iniciativa — Innovation Hub</title>
+    <title>Inicio — Innovation Hub</title>
 </head>
 
 <body>
 
     <header>
-        <a href="../index.html">Innovation Hub</a>
+        <a href="../index.html" aria-current="page">Innovation Hub</a>
 
         <nav aria-label="Principal">
             <ul>
@@ -24,79 +24,110 @@
     </header>
 
     <main>
-        <h1>Mapa interactivo de espacios de estudio colaborativo</h1>
+        <section class="hero" aria-labelledby="Introducción a Innovation Hub">
+            <div class="hero-content">
+                <h1>Bienvenido a Innovation Hub</h1>
+                <p>Conectamos ideas, necesidades y retos con personas para facilitar la creación de equipos
+                    interdisciplinarios.</p>
+            </div>
 
-        <section aria-labelledby="informacion-iniciativa">
-            <h2 id="informacion-iniciativa" class="sr-only">Detalles de la iniciativa</h2>
-
-            <!-- Lista descripción -->
-            <dl>
-                <dt>Tipo</dt>
-                <dd>Idea</dd>
-
-                <dt>Categoría</dt>
-                <dd>Comunidad</dd>
-
-                <dt>Visibilidad</dt>
-                <dd>Institucional (<a href="login.html">Inicia sesión para ver más detalles</a>)</dd>
-
-                <dt>Autor y Fecha</dt>
-                <dd>Valeria Morales</dd>
-
-                <dt>Fecha de publicación</dt>
-                <dd>
-                    <time datetime="2026-08-07">7 de agosto de 2026</time>
-                </dd>
-
-                <dt>Estado</dt>
-                <dd>
-                    <span class="estado">
-                        <span aria-hidden="true">●</span> En progreso
-                    </span>
-                </dd>
-            </dl>
-
-            <section aria-labelledby="titulo-descripcion">
-                <h2 id="titulo-descripcion">Descripción</h2>
-                <p>
-                    La gestión óptima de los espacios físicos dentro de un campus universitario suele representar un desafío constante tanto para el cuerpo estudiantil como para las autoridades administrativas. Durante los períodos de exámenes o entrega de proyectos finales, encontrar un aula libre o un cubículo de estudio disponible se convierte en una tarea frustrante que consume tiempo valioso de los estudiantes.
-                </p>
-                <p>
-                    La propuesta consiste en desarrollar una aplicación web interactiva basada en mapas digitales del campus que permita visualizar en tiempo real la ocupación y disponibilidad de las diferentes salas y áreas comunes. Mediante sensores de presencia IoT o reportes voluntarios actualizados por los mismos usuarios, el sistema mostrará un mapa de calor dinámico que guíe a los estudiantes hacia los espacios de trabajo desocupados más cercanos.
-                </p>
-                <p>
-                    Además de resolver la saturación de espacios, esta herramienta fomentará la colaboración interdisciplinaria al habilitar funciones de reserva rápida y la indicación de cubículos habilitados para discusiones grupales. Con ello se maximiza el aprovechamiento de la infraestructura
-                    universitaria y se mejora de forma directa la experiencia académica de la comunidad estudiantil.
-                </p>
-            </section>
-
-            <section aria-labelledby="titulo-competencias">
-                <h2 id="titulo-competencias">Competencias requeridas</h2>
-                <ul>
-                    <li>Geolocalización</li>
-                    <li>UI/UX</li>
-                    <li>Integración de Mapas API</li>
-                </ul>
-            </section>
-
-            <section aria-labelledby="titulo-miembros">
-                <h2 id="titulo-miembros">Miembros</h2>
-                <ul>
-                    <li>Valeria Morales (Propietaria)</li>
-                    <li>Esteban Quirós</li>
-                    <li>Sofía Vargas</li>
-                </ul>
-            </section>
-
-            <p>
-                <a href="solicitud-de-participacion.html" class="boton-primario">Solicitar unirme a la iniciativa</a>
-            </p>
+            <a href="paginas/catalogo-de-iniciativas.html" class="button" role="button">¡Súmate a una iniciativa!</a>
         </section>
+
+        <section class="como-funciona" aria-labelledby="titulo-como-funciona">
+            <h2 id="titulo-como-funciona">¿Cómo funciona Innovation Hub?</h2>
+            <p>Nuestra plataforma clasifica las oportunidades de colaboración en tres tipos principales para que puedas
+                encontrar exactamente lo que buscas:</p>
+
+            <div class="tipos-iniciativas">
+                <article class="tipo-concepto">
+                    <h3>Idea</h3>
+                    <p>Una propuesta de solución, producto o servicio (por ejemplo, una nueva plataforma web para
+                        voluntarios). Ideal si tienes una visión y buscas equipo para desarrollarla.</p>
+                </article>
+
+                <article class="tipo-concepto">
+                    <h3>Necesidad</h3>
+                    <p>Una situación problemática que aún no tiene una solución definida (por ejemplo, una organización
+                        que maneja sus datos en hojas de cálculo desordenadas). Perfecto si tienes un problema y
+                        necesitas apoyo técnico.</p>
+                </article>
+
+                <article class="tipo-concepto">
+                    <h3>Reto</h3>
+                    <p>Un problema delimitado impulsado institucionalmente que requiere que uno o varios equipos
+                        propongan una solución concreta.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="iniciativas-disponibles" aria-labelledby="iniciativas-disponibles">
+            <h2 id="iniciativas-disponibles">Iniciativas disponibles</h2>
+            <p>Echa un vistazo a algunas de nuestras iniciativas disponibles.</p>
+
+            <article class="iniciativa">
+                <h3>Mapa interactivo de espacios de estudio colaborativo</h3>
+
+                <p><span aria-hidden="true">Categoría:</span> Idea · Comunidad</p>
+
+                <p>Aplicación de mapas que muestra en tiempo real la disponibilidad de aulas libres y cubículos de
+                    estudio en las diferentes sedes del campus.</p>
+
+                <p>Publicado por <strong>Valeria Morales</strong> el
+                    <time datetime="2026-08-07">7 de agosto de 2026</time>
+                </p>
+
+                <p><a href="detalle-iniciativa.html">Ver la iniciativa Mapa interactivo de espacios</a></p>
+            </article>
+
+            <article class="iniciativa">
+                <h3>Red de huertas hidropónicas urbanas</h3>
+
+                <p><span aria-hidden="true">Categoría:</span> Idea · Ambiente</p>
+
+                <p>Sistema IoT de monitoreo automático de nutrientes y humedad para huertas sostenibles en espacios
+                    reducidos del campus.</p>
+
+                <p>Publicado por <strong>Carlos Montero</strong> el
+                    <time datetime="2026-08-18">18 de agosto de 2026</time>
+                </p>
+
+                <p><a href="detalle.html">Ver la iniciativa Red de huertas</a></p>
+            </article>
+
+            <article class="iniciativa">
+                <h3>Automatización de inventario para asociaciones</h3>
+
+                <p><span aria-hidden="true">Categoría:</span> Necesidad · Comunidad</p>
+
+                <p>Las asociaciones estudiantiles manejan sus préstamos de equipos en hojas de cálculo desordenadas; se
+                    requiere un sistema centralizado.</p>
+
+                <p>Publicado por <strong>Sofía Vargas</strong> el
+                    <time datetime="2026-08-20">20 de agosto de 2026</time>
+                </p>
+
+                <p><a href="detalle.html">Ver la iniciativa Automatización de inventario</a></p>
+            </article>
+
+            <a href="paginas/catalogo-de-iniciativas.html">Ver el catálogo de iniciativas</a>
+
+        </section>
+
+        <section class="publicacion-de-iniciativas" aria-labelledby="publicacion-de-iniciativas">
+            <h2 id="publicacion-de-iniciativas">Publicación de iniciativas</h2>
+            <p>Si tienes una idea, necesidad o reto que quieras compartir con la comunidad, puedes publicarla en
+                Innovation Hub.</p>
+
+            <a href="paginas/registro-de-iniciativa.html" class="button">Publicar iniciativa</a>
+
+        </section>
+
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>Innovation Hub · Universidad CENFOTEC</p>
-        <p><a href="mailto:contacto@ucenfotec.ac.cr">contacto@ucenfotec.ac.cr</a></p>
+        <p><a href="mailto:innovationhub@ucenfotec.ac.cr">innovationhub@ucenfotec.ac.cr</a></p>
     </footer>
 
 </body>
