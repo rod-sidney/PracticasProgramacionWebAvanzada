@@ -2,133 +2,78 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inicio — Innovation Hub</title>
+  <meta charset="UTF-8">
+  <!-- Viewport obligatorio para diseño adaptable -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 2 — Layout adaptable</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <a href="../index.html" aria-current="page">Innovation Hub</a>
+  <!-- Encabezado principal -->
+  <header class="main-header">
+    <div class="logo">
+      <h1>Portal Cenfotec</h1>
+    </div>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Cursos</a></li>
+        <li><a href="#">Proyectos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <nav aria-label="Principal">
-            <ul>
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="publicar.html">Publicar iniciativa</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="perfil.html">Mi perfil</a></li>
-                <li><a href="solicitudes.html">Mis solicitudes</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Barra de progreso de lectura -->
+  <div class="reading-progress" aria-hidden="true"></div>
 
-    <main>
-        <section class="hero" aria-labelledby="Introducción a Innovation Hub">
-            <div class="hero-content">
-                <h1>Bienvenido a Innovation Hub</h1>
-                <p>Conectamos ideas, necesidades y retos con personas para facilitar la creación de equipos
-                    interdisciplinarios.</p>
-            </div>
+  <!-- Contenedor de layout: es un div porque solo agrupa para maquetar -->
+  <div class="layout-container">
 
-            <a href="paginas/catalogo-de-iniciativas.html" class="button" role="button">¡Súmate a una iniciativa!</a>
-        </section>
+    <main class="content-area">
+      <section class="hero">
+        <h2>Bienvenido al módulo de Web Frontend</h2>
+        <p>Aplica tus conocimientos de modelo de caja, posicionamiento, Flexbox,
+          CSS Grid y mobile-first para dar estilo a este portal.</p>
+      </section>
 
-        <section class="como-funciona" aria-labelledby="titulo-como-funciona">
-            <h2 id="titulo-como-funciona">¿Cómo funciona Innovation Hub?</h2>
-            <p>Nuestra plataforma clasifica las oportunidades de colaboración en tres tipos principales para que puedas
-                encontrar exactamente lo que buscas:</p>
+      <section class="cards-grid" aria-label="Contenidos del módulo">
+        <article class="card">
+          <h3>Clase 1: HTML5</h3>
+          <p>Estructura semántica, accesibilidad y maquetación limpia.</p>
+        </article>
 
-            <div class="tipos-iniciativas">
-                <article class="tipo-concepto">
-                    <h3>Idea</h3>
-                    <p>Una propuesta de solución, producto o servicio (por ejemplo, una nueva plataforma web para
-                        voluntarios). Ideal si tienes una visión y buscas equipo para desarrollarla.</p>
-                </article>
+        <article class="card">
+          <h3>Clase 2: CSS3</h3>
+          <p>Diseño adaptable, Flexbox, Grid y variables CSS.</p>
+        </article>
 
-                <article class="tipo-concepto">
-                    <h3>Necesidad</h3>
-                    <p>Una situación problemática que aún no tiene una solución definida (por ejemplo, una organización
-                        que maneja sus datos en hojas de cálculo desordenadas). Perfecto si tienes un problema y
-                        necesitas apoyo técnico.</p>
-                </article>
-
-                <article class="tipo-concepto">
-                    <h3>Reto</h3>
-                    <p>Un problema delimitado impulsado institucionalmente que requiere que uno o varios equipos
-                        propongan una solución concreta.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="iniciativas-disponibles" aria-labelledby="iniciativas-disponibles">
-            <h2 id="iniciativas-disponibles">Iniciativas disponibles</h2>
-            <p>Echa un vistazo a algunas de nuestras iniciativas disponibles.</p>
-
-            <article class="iniciativa">
-                <h3>Mapa interactivo de espacios de estudio colaborativo</h3>
-
-                <p><span aria-hidden="true">Categoría:</span> Idea · Comunidad</p>
-
-                <p>Aplicación de mapas que muestra en tiempo real la disponibilidad de aulas libres y cubículos de
-                    estudio en las diferentes sedes del campus.</p>
-
-                <p>Publicado por <strong>Valeria Morales</strong> el
-                    <time datetime="2026-08-07">7 de agosto de 2026</time>
-                </p>
-
-                <p><a href="detalle-iniciativa.html">Ver la iniciativa Mapa interactivo de espacios</a></p>
-            </article>
-
-            <article class="iniciativa">
-                <h3>Red de huertas hidropónicas urbanas</h3>
-
-                <p><span aria-hidden="true">Categoría:</span> Idea · Ambiente</p>
-
-                <p>Sistema IoT de monitoreo automático de nutrientes y humedad para huertas sostenibles en espacios
-                    reducidos del campus.</p>
-
-                <p>Publicado por <strong>Carlos Montero</strong> el
-                    <time datetime="2026-08-18">18 de agosto de 2026</time>
-                </p>
-
-                <p><a href="detalle.html">Ver la iniciativa Red de huertas</a></p>
-            </article>
-
-            <article class="iniciativa">
-                <h3>Automatización de inventario para asociaciones</h3>
-
-                <p><span aria-hidden="true">Categoría:</span> Necesidad · Comunidad</p>
-
-                <p>Las asociaciones estudiantiles manejan sus préstamos de equipos en hojas de cálculo desordenadas; se
-                    requiere un sistema centralizado.</p>
-
-                <p>Publicado por <strong>Sofía Vargas</strong> el
-                    <time datetime="2026-08-20">20 de agosto de 2026</time>
-                </p>
-
-                <p><a href="detalle.html">Ver la iniciativa Automatización de inventario</a></p>
-            </article>
-
-            <a href="paginas/catalogo-de-iniciativas.html">Ver el catálogo de iniciativas</a>
-
-        </section>
-
-        <section class="publicacion-de-iniciativas" aria-labelledby="publicacion-de-iniciativas">
-            <h2 id="publicacion-de-iniciativas">Publicación de iniciativas</h2>
-            <p>Si tienes una idea, necesidad o reto que quieras compartir con la comunidad, puedes publicarla en
-                Innovation Hub.</p>
-
-            <a href="paginas/registro-de-iniciativa.html" class="button">Publicar iniciativa</a>
-
-        </section>
-
+        <article class="card">
+          <!-- Insignia posicionada: se resuelve en la Fase 4 -->
+          <span class="card__badge card__badge--nuevo">Nuevo</span> <!-- CARD BADGE "NUEVO" -->
+          <h3>Clase 3: JavaScript</h3>
+          <p>Manipulación del DOM, eventos y lógica interactiva.</p>
+        </article>
+      </section>
     </main>
 
-    <footer class="footer">
-        <p>Innovation Hub · Universidad CENFOTEC</p>
-        <p><a href="mailto:innovationhub@ucenfotec.ac.cr">innovationhub@ucenfotec.ac.cr</a></p>
-    </footer>
+    <aside class="sidebar" aria-label="Recursos rápidos">
+      <h3>Recursos rápidos</h3>
+      <ul>
+        <li><a href="#">Documentación MDN</a></li>
+        <li><a href="#">Guía de Flexbox</a></li>
+        <li><a href="#">Guía de CSS Grid</a></li>
+        <li><a href="#">Validador del W3C</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <footer class="main-footer">
+    <p>&copy; 2026 Universidad Cenfotec — Desarrollo Web Frontend</p>
+  </footer>
 
 </body>
 

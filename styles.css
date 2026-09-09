@@ -1,0 +1,244 @@
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN GLOBAL (:root)
+   ========================================================================== */
+:root {
+  /* Paleta de colores */
+  --color-primary:   #0056b3;
+  --color-secondary: #17a2b8; /* Turqueza para nuevo */
+  --color-dark:      #212529;
+  --color-light:     #f8f9fa;
+  --color-white:     #ffffff;
+  --color-border:    #dee2e6;
+  --color-text-muted: #6c757d;  /* elemento agregado */
+
+  --color-badge-updated:    #28a745; /* Verde para actualizado */
+  --color-badge-upcoming:   #ffc107; /* Amarillo para próximamente */
+  --color-badge-new:        #8017a0; /* Turquesa para nuevo */
+
+  /* Tipografía y espaciado */
+  --font-main:     system-ui, -apple-system, sans-serif;
+  --spacing-sm:    0.5rem;
+  --spacing-md:    1rem;
+  --spacing-lg:    2rem;
+  --border-radius: 0.5rem;
+
+  /* Altura del encabezado fijo: la necesita el sidebar en la Fase 4 */
+  --alto-header:   4.5rem;
+
+  --max-width-container: 75rem; /* ancho máximo para centrar containers, elemento agregado */
+}
+
+/* Reset del modelo de caja */
+/* Creo que funciona para que todos los elementos tengan el mismo box sizing, y además pone el margin y padding en cero para que no sean afectados por los que tienen los navegadores */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;   /* respeta la preferencia de tamaño del usuario */
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   2. ESTILOS BASE (MOBILE-FIRST)
+   ========================================================================== */
+
+/* --- Encabezado y navegación --- */
+.main-header {
+  display: flex; /* F2-1 */
+  flex-direction: column; /* F2-1 */
+  gap: var(--spacing-md); /* F2-1 */
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-md);
+
+  position: sticky; /* F4-1 */
+  z-index: 1000; /* F4-1 */
+
+  /* F2-1: aplicar Flexbox para ordenar el logo y la navegación en móvil.
+     En pantalla pequeña deben quedar en columna, con separación entre ambos. */
+
+  /* F4-1: fijar el encabezado al desplazar la página.
+     Recuerde que sticky necesita un umbral y un contexto de apilamiento. */
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* F2-2 */
+  gap: var(--spacing-sm); /* F2-2 */
+
+  /* F2-2: distribuir los enlaces con Flexbox. 
+     Deben poder bajar de línea cuando no quepan. */
+}
+
+.main-nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  padding: var(--spacing-sm);
+  display: block;
+}
+
+/* --- Contenedor de layout --- */
+.layout-container {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* --- Tarjetas de contenido --- */
+.cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+
+  position: relative; /* F4-2 */
+  padding-right: 4rem; /* F4-2 */
+
+  /* F4-2: preparar la tarjeta como ancla de la insignia
+     y reservar espacio para que la insignia no tape el título. */
+}
+
+.card__badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--border-radius);
+  padding: 0.15rem 0.6rem;
+  
+  position: absolute; /* F4-3 */
+  top: 0.5rem; /* F4-3 */
+  right: 0.5rem; /* F4-3 */
+  /* background-color: var(--color-secondary);  F4-3 */
+  color: var(--color-white); /* F4-3 */
+
+  /* F4-3: ubicar la insignia en la esquina superior derecha de la
+     tarjeta, superpuesta, sin empujar el contenido.
+     Cuide el contraste entre el texto y el fondo que elija. */
+}
+
+/* Modificadores basados en variables */
+.card__badge--nuevo {
+  background-color: var(--color-badge-new);
+}
+
+.card__badge--actualizado {
+  background-color: var(--color-badge-updated);
+}
+
+.card__badge--proximamente {
+  background-color: var(--color-badge-upcoming);
+  color: var(--color-dark);
+}
+
+.sidebar {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+/* --- Pie de página --- */
+.main-footer {
+  text-align: center;
+  padding: var(--spacing-md);
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  margin-top: var(--spacing-lg);
+}
+
+/* ==========================================================================
+   3. DISEÑO ADAPTABLE (MEDIA QUERIES — DESDE 48rem = 768px)
+   ========================================================================== */
+@media (min-width: 48rem) {
+
+  /* F3-1: pasar el encabezado a una sola fila horizontal,
+     con el logo a un extremo y la navegación al otro. */
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* F3-2: convertir .layout-container en una rejilla de dos columnas
+     (contenido principal + barra lateral) usando grid-template-areas
+     o grid-template-columns. Limite el ancho máximo y centre el bloque. */
+  .layout-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 18rem;
+    gap: var(--spacing-lg);
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+  }
+
+  /* F3-3: convertir .cards-grid en una rejilla CSS Grid.
+     Dos columnas en tableta y tres a partir de 64rem (ver el bloque 4).
+     Cuidado: una columna 1fr no se encoge por debajo de su contenido. */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  /* F4-4: hacer que la barra lateral acompañe el desplazamiento,
+     sin quedar debajo del encabezado fijo.
+     Pista: en una rejilla, el elemento se estira a la altura de la fila. */
+  .sidebar {
+    position: sticky;
+    top: calc(var(--alto-header) + 3px + var(--spacing-md));
+    align-self: start;
+  }
+}
+
+/* ==========================================================================
+   4. ESCRITORIO AMPLIO (DESDE 64rem = 1024px)
+   ========================================================================== */
+@media (min-width: 64rem) {
+
+  /* F3-4: ampliar la barra lateral y pasar las tarjetas a tres columnas. */
+  .layout-container {
+    grid-template-columns: minmax(0, 1fr) 22rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Barra de progreso de lectura */
+.reading-progress {
+  position: sticky;
+  top: var(--alto-header); /* Se pega justo debajo del header */
+  height: 3px;             /* Altura fija requerida */
+  width: 40%;              /* Ancho fijo inicial del 40% según las instrucciones */
+  background-color: var(--color-secondary); /* Color llamativo usando variables */
+  z-index: 1001;           /* Mayor que el header para garantizar que no se tape */
+}
