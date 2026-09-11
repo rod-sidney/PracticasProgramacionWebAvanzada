@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    padding: 16px;
+
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    grid-template-rows: auto 1fr auto;
+    gap: 16px;
+
+    grid-template-areas: "cabecera cabecera cabecera"
+                         "menu contenido lateral"
+                         "pie pie pie";
+
+}
+
+header {
+    grid-area: cabecera;
+    
+    background-color: #0f766e;
+    color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+nav,
+main,
+aside {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+nav {
+    grid-area: menu;
+}
+
+aside {
+    grid-area: lateral;
+}
+
+main {
+    grid-area: contenido;
+}
+
+footer {
+    grid-area: pie;
+
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "cabecera"
+                             "menu"
+                             "contenido"
+                             "lateral"
+                             "pie";
+    }
+
+}
