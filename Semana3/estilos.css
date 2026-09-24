@@ -1,0 +1,107 @@
+:root {
+    --color-principal: #6a1b9a;
+    --color-alerta: #b03a2b;
+    --espacio: 1rem;
+    --acento: blue;
+}
+
+body {
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+.tarjeta {
+    color: var(--color-principal);
+    padding: var(--espacio);
+    border: 2px solid #cccccc;
+}
+
+.tarjeta {
+    color: blue;
+    font-family: Georgia, serif;
+}
+
+/*
+.tarjeta {
+    color: darkgreen;
+}
+
+.tarjeta a {
+    color: inherit;
+}
+*/
+
+
+h3 {
+    color: green;
+}
+
+/*.titulo {
+    color: blue;
+}*/
+.titulo {
+    color: var(--color-principal);
+}
+
+.tarjeta h3 {
+    color: orange;
+}
+
+#destacada h3 {
+    color: red;
+    /* se aplica este porque es mas especifico */
+}
+
+/*
+.resumen {
+    color: purple; /* (0,1,0) 
+}
+
+.tarjeta p {
+    color: gray; /* aquí hay una clase y un elemento (0,1,1) 
+}
+*/
+
+.tarjeta p {
+    color: red;
+}
+
+p.resumen {
+    color: blue;
+}
+
+
+.estado {
+    color: var(--color-alerta);
+}
+
+/*.autor:hover {
+    text-decoration: none;
+}*/
+.autor {
+    color: #00479b;
+    text-decoration: none;
+}
+
+.autor:hover {
+    text-decoration: underline;
+}
+
+.autor:focus-visible {
+    outline: 2px solid #00479b;
+    outline-offset: 2px;
+}
+
+.enlace {
+    color: var(--color-principal);
+}
+
+.boton {
+    background: var(--color-principal);
+    padding: var(--espacio);
+    color: var(--acento);
+}
+
+.panel {
+    --acento: green;
+}

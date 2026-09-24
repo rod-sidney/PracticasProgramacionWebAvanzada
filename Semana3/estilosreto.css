@@ -1,0 +1,59 @@
+:root {
+    --principal: #2457a6;
+    --texto: #333333;
+    --exito: #18794e;
+    --alerta: #b03a2b; /*estado alerta*/
+}
+
+body { 
+    color: var(--texto); 
+    font-family: Arial, sans-serif;
+}
+
+.producto { 
+    padding: 20px; 
+    border: 2px solid #cccccc;
+}
+
+.producto__titulo { 
+    color: var(--principal); 
+}
+
+.producto__descripcion { 
+    color: inherit; 
+}
+
+.producto__estado { 
+    font-weight: bold;
+    color: var(--texto);
+}
+
+/*sin important*/
+.producto__accion { 
+    color: var(--principal); 
+    text-decoration: none;
+}
+
+.producto__accion:hover { 
+    text-decoration: underline; 
+}
+
+.producto__accion:focus-visible {
+    outline: 2px solid var(--principal);
+    outline-offset: 2px;
+}
+
+/* RETO 4: Modificadores de estado (cambian borde y color de estado) */
+.producto--exito {
+    border-color: var(--exito);
+}
+.producto--exito .producto__estado {
+    color: var(--exito);
+}
+
+.producto--alerta {
+    border-color: var(--alerta);
+}
+.producto--alerta .producto__estado {
+    color: var(--alerta);
+}

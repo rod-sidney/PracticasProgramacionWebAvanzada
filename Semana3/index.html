@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto Final: El CSS que nadie quiere mantener</title>
+
+    <link rel="stylesheet" href="estilosreto.css">
+</head>
+
+<body>
+
+    <h1>Catálogo de Cursos</h1>
+
+    <!-- 1. Estado Normal (Conserva el ID pero el CSS ya no lo usa) -->
+    <section class="producto" id="producto-importante">
+        <h2 class="producto__titulo">Curso de Desarrollo Web</h2>
+        <p class="producto__descripcion">Curso introductorio para desarrollar interfaces web.</p>
+        <span class="producto__estado">Cupos disponibles</span>
+        <a class="producto__accion" href="#">Ver información</a>
+    </section>
+
+    <!-- 2. Estado Alerta (Modificador aplicado en el contenedor) -->
+    <section class="producto producto--alerta">
+        <h2 class="producto__titulo">Curso de Ciberseguridad</h2>
+        <p class="producto__descripcion">Últimos espacios para cierre de matrícula.</p>
+        <span class="producto__estado">Pocos cupos</span>
+        <a class="producto__accion" href="#">Ver información</a>
+    </section>
+
+    <!-- 3. Estado Éxito (Modificador aplicado en el contenedor) -->
+    <section class="producto producto--exito">
+        <h2 class="producto__titulo">Curso de Python</h2>
+        <p class="producto__descripcion">El curso ha alcanzado el mínimo de estudiantes.</p>
+        <span class="producto__estado">Confirmado</span>
+        <a class="producto__accion" href="#">Ver información</a>
+    </section>
+
+</body>
+
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratorio CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <article class="tarjeta" id="destacada">
+        <h3 class="titulo">Desarrollo de aplicación web</h3>
+        <p class="resumen">Plataforma para coordinar actividades de voluntariado.</p>
+        <p>Estado: <span class="estado">En desarrollo</span></p>
+        <a class="autor" href="#">Equipo de Desarrollo</a>
+    </article>
+    <!--<article class="tarjeta">
+        <h3>Título del proyecto</h3>
+        <p>Descripción del proyecto.</p>
+        <p>Información adicional.</p>
+    </article>
+    <button class="boton">Botón fuera del panel</button>
+
+    <div class="panel">
+        <button class="boton">Botón dentro del panel</button>
+    </div>
+
+
+</body>
+
+</html>
+-->
