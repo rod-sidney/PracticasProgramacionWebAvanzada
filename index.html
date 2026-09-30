@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestor Académico</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio de la aplicación -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+
+    <!-- =====================================================
+         BARRA DE NAVEGACIÓN
+         ===================================================== -->
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-4">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Gestor Académico
+            </a>
+
+            <div>
+
+                <button class="btn btn-outline-light">
+                    Perfil
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main class="container py-5">
+
+
+        <!-- =================================================
+             ENCABEZADO
+             ================================================= -->
+
+        <section class="mb-5">
+
+            <h1>
+                Panel principal
+            </h1>
+
+            <p class="text-muted">
+                Administración de cursos y proyectos estudiantiles.
+            </p>
+
+        </section>
+
+        <!-- =================================================
+             COMPONENTE PERSONALIZADO 1 
+             ================================================= -->
+
+        <section class="estado-proyecto p-4 shadow-sm mb-4">
+
+            <h2 class="h5">
+                Proyecto con revisión pendiente
+            </h2>
+
+            <p class="mb=0">
+                El proyecto Sistema de Biblioteca
+                todavía debe ser revisado por el profesor.
+            </p>
+
+        </section>
+
+        <!-- =================================================
+             COMPONENTE PERSONALIZADO 2 
+             ================================================= -->
+
+        <section class=" estado-proyecto estado-proyecto--urgente p-4 shadow-sm mb-4">
+
+            <h2 class="h5">
+                Proyecto con revisión urgente
+            </h2>
+
+            <p class="mb=0">
+                El plazo para revisar el proyecto de Automatización
+                vence mañana 30-09-2026.
+            </p>
+
+        </section>
+
+        <!-- =================================================
+             RESUMEN GENERAL
+             ================================================= -->
+
+        <section class="row g-4 mb-5">
+
+
+            <!-- Cursos activos -->
+
+            <div class="col-md-4">
+
+                <div class="card shadow-sm">
+
+                    <div class="card-body">
+
+                        <h2 class="h5">
+                            Cursos activos
+                        </h2>
+
+                        <p class="display-6">
+                            6
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Estudiantes -->
+
+            <div class="col-md-4">
+
+                <div class="card shadow-sm">
+
+                    <div class="card-body">
+
+                        <h2 class="h5">
+                            Estudiantes
+                        </h2>
+
+                        <p class="display-6">
+                            128
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Proyectos pendientes -->
+
+            <div class="col-md-4">
+
+                <div class="card shadow-sm">
+
+                    <div class="card-body">
+
+                        <h2 class="h5">
+                            Proyectos pendientes
+                        </h2>
+
+                        <p class="display-6">
+                            14
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =================================================
+             PROYECTOS RECIENTES
+             ================================================= -->
+
+        <section>
+
+            <h2 class="mb-4">
+                Proyectos recientes
+            </h2>
+
+
+            <div class="row g-4">
+
+
+                <!-- Proyecto 1: Pendiente -->
+                <div class="col-md-4">
+
+                    <article class="proyecto-card proyecto-card--pendiente shadow-sm p-4">
+                        <h3 class="h5">
+                            Sistema de Biblioteca
+                        </h3>
+
+                        <p>
+                            <strong>Responsable:</strong> Ana Rodríguez<br>
+                            Aplicación para gestionar libros, préstamos y devoluciones.
+                        </p>
+
+                        <span class="badge text-bg-warning">
+                            Pendiente
+                        </span>
+
+                        <button class="btn btn-outline-warning mt-3 d-block">
+                            Ver proyecto
+                        </button>
+                    </article>
+                </div>
+
+                <!-- Proyecto 2: En revisión -->
+                <div class="col-md-4">
+                    <article class="proyecto-card proyecto-card--revision shadow-sm p-4">
+                        <h3 class="h5">
+                            Portal de Cursos
+                        </h3>
+
+                        <p>
+                            <strong>Responsable:</strong> Carlos Mora<br>
+                            Aplicación para consultar cursos, horarios y profesores.
+                        </p>
+
+                        <span class="badge text-bg-primary">
+                            En revisión
+                        </span>
+
+                        <button class="btn btn-outline-primary mt-3 d-block">
+                            Ver proyecto
+                        </button>
+                    </article>
+                </div>
+
+                <!-- Proyecto 3: Finalizado -->
+                <div class="col-md-4">
+                    <article class="proyecto-card proyecto-card--finalizado shadow-sm p-4">
+                        <h3 class="h5">
+                            Control de Inventario
+                        </h3>
+
+                        <p>
+                            <strong>Responsable:</strong> María Vargas<br>
+                            Aplicación para administrar productos y existencias.
+                        </p>
+
+                        <span class="badge text-bg-success">
+                            Finalizado
+                        </span>
+
+                        <button class="btn btn-outline-success mt-3 d-block">
+                            Ver proyecto
+                        </button>
+                    </article>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+        FOOTER - como identificador para la entrega :)
+         ===================================================== -->
+    <footer class="bg-dark text-white py-4 mt-5">
+
+        <div
+            class="container d-flex flex-column flex-md-row justify-content-md-between align-items-center text-center text-md-start">
+
+            <div class="mb-3 mb-md-0">
+                <p class="mb-1 fw-bold">Universidad Cenfotec</p>
+                <p class="mb-0 text-white-50">Curso Programación Web Avanzada &bull; Semana 5</p>
+            </div>
+
+            <div>
+                <p class="mb-0 text-white-50">Estudiante: <span class="text-white fw-bold">Sidney Rodríguez</span></p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

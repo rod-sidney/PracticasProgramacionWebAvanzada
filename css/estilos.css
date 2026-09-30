@@ -1,0 +1,208 @@
+/* =========================================================
+   GESTOR ACADÉMICO
+   CSS BASE DEL PROYECTO
+   ========================================================= */
+
+
+/* =========================================================
+   1. ESTILOS GENERALES
+   ========================================================= */
+
+/*
+   Fondo general de la aplicación.
+   Bootstrap controla gran parte de la apariencia,
+   pero agregamos un fondo propio.
+*/
+body {
+
+   background-color: #f5f7fa;
+}
+
+
+/* =========================================================
+   2. NAVBAR
+   ========================================================= */
+
+/*
+   Damos un poco más de peso visual
+   al nombre de la aplicación.
+*/
+.navbar-brand {
+
+   font-weight: 600;
+}
+
+
+/* =========================================================
+   3. TEXTO GENERAL
+   ========================================================= */
+
+/*
+   Mejoramos la lectura de los párrafos
+   dentro del contenido principal.
+*/
+main p {
+
+   line-height: 1.6;
+}
+
+
+/* =========================================================
+   4. TARJETAS BOOTSTRAP
+   ========================================================= */
+
+/*
+   Agregamos una transición propia
+   a las tarjetas de Bootstrap.
+*/
+.card {
+
+   transition: transform 0.2s ease,
+      box-shadow 0.2s ease;
+}
+
+
+/*
+   Al colocar el mouse sobre la tarjeta
+   se desplaza ligeramente hacia arriba.
+*/
+.card:hover {
+
+   transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   5. INDICADORES DEL DASHBOARD
+   ========================================================= */
+
+.display-6 {
+
+   font-weight: 600;
+}
+
+
+/* =========================================================
+   6. ALTURA DE LAS TARJETAS
+   ========================================================= */
+
+/*
+   Hace que las tarjetas dentro de una fila
+   tengan una altura uniforme.
+*/
+.row .card {
+
+   height: 100%;
+}
+
+
+/* =========================================================
+   7. BOTONES
+   ========================================================= */
+
+.card .btn {
+
+   min-width: 130px;
+}
+
+
+/* =========================================================
+   8. BADGES
+   ========================================================= */
+
+.badge {
+
+   padding: 0.5rem 0.75rem;
+}
+
+
+/* =========================================================
+   9. TÍTULOS
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+
+   font-weight: 600;
+}
+
+
+/* =========================================================
+   10. CONTENIDO DE LAS TARJETAS
+   ========================================================= */
+
+.card-body p {
+
+   margin-bottom: 1rem;
+}
+
+/* =========================================================
+   11. COMPONENTES PERSONALIZADOS
+   ========================================================= */
+.estado-proyecto {
+   /*fondo propiop del componente*/
+   background-color: #eef5ff;
+
+   /*borde lateral que identifica visualmente el aviso*/
+   border-left: 6px solid #0d6efd;
+
+   /*bordes redondeados*/
+   border-radius: 8px;
+}
+
+/*cambiamos solamente el titulo que se encuentra dentro del componente*/
+.estado-proyecto h2 {
+   color: #0d6efd;
+}
+
+.estado-proyecto--urgente {
+   background-color: #f8d7da;
+
+   border-left-color: #dc3545;
+}
+
+.estado-proyecto--urgente h2 {
+   color: #842029;
+}
+
+/* =========================================================
+                  ACTIVIDAD EN CLASE   
+
+12. TARJETAS DE PROYECTOS
+   ========================================================= */
+
+/*general*/
+.proyecto-card {
+   background-color: #ffffff;
+   border-left: 6px solid #6c757d;
+   border-radius: 10px;
+   height: 100%;
+}
+
+/*pendiente*/
+.proyecto-card--pendiente {
+   border-left-color: #ffc107;
+}
+
+.proyecto-card--pendiente h3 {
+   color: #856404;
+}
+
+/*en revisión*/
+.proyecto-card--revision {
+   border-left-color: #0d6efd;
+}
+
+.proyecto-card--revision h3 {
+   color: #084298;
+}
+
+/*finalizado*/
+.proyecto-card--finalizado {
+   border-left-color: #198754;
+}
+
+.proyecto-card--finalizado h3 {
+   color: #0f5132;
+}

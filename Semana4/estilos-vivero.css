@@ -1,0 +1,348 @@
+/* =========================================================
+   Vivero La Semilla — CSS BASE (antes de Bootstrap)
+   Nota: este sitio NO es responsivo. No tiene media queries;
+   en un celular las columnas se aprietan. Bootstrap lo resolverá.
+   Todo el diseño está hecho "a mano": contenedor, menú,
+   tarjetas con flexbox, botones, formulario y pie.
+   ========================================================= */
+
+:root {
+  --verde-bosque: #1F4D3A;
+  --verde-hoja: #6BA368;
+  --verde-claro: #DCEBDC;
+  --menta: #EEF5EE;
+  --sol: #F2C14E;
+  --texto: #1F2A1F;
+}
+
+/*
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}*/
+
+body {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  color: var(--texto);
+  background-color: var(--menta);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bitter", Georgia, serif;
+  line-height: 1.2;
+}
+
+/* ---------- Contenedor centrado (Bootstrap: .container) ---------- */
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.seccion {
+  padding-top: 48px;
+  padding-bottom: 16px;
+}
+
+.seccion h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: var(--verde-bosque);
+}
+
+/* ---------- Encabezado y menú (Bootstrap: .navbar) ---------- */
+
+.navbar-vivero {
+  --bs-navbar-color: rgba(255, 255, 255, 0.85);
+  /* enlaces normales */
+  --bs-navbar-hover-color: var(--sol);
+  /* enlace con el mouse encima */
+  --bs-navbar-active-color: var(--sol);
+  /* enlace con clase .active */
+  --bs-navbar-brand-color: #fff;
+  /* logo */
+  --bs-navbar-brand-hover-color: #fff;
+  background-color: var(--verde-bosque);
+  /* Bootstrap no da fondo */
+}
+
+.navbar-vivero .navbar-brand,
+.navbar-vivero .nav-link {
+  font-weight: 700;
+}
+
+/*
+.encabezado {
+  background-color: var(--verde-bosque);
+  padding: 14px 0;
+}
+
+.encabezado-interno {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  font-family: "Bitter", Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.menu a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.menu a:hover,
+.menu a.activo {
+  color: var(--sol);
+}
+*/
+
+/* ---------- Portada ---------- */
+.portada {
+  background: linear-gradient(120deg, var(--verde-bosque) 0%, #2F6B4F 100%);
+  color: #fff;
+  padding: 72px 0;
+}
+
+.portada-texto {
+  max-width: 620px;
+}
+
+.portada h1 {
+  font-size: 2.6rem;
+  margin-bottom: 16px;
+}
+
+.portada p {
+  font-size: 1.15rem;
+  margin-bottom: 28px;
+  opacity: 0.9;
+}
+
+/* ---------- Botones (Bootstrap: .btn) ---------- */
+.btn-vivero {
+  --bs-btn-color: var(--texto);
+  --bs-btn-bg: var(--sol);
+  --bs-btn-border-color: var(--sol);
+  --bs-btn-hover-color: var(--texto);
+  --bs-btn-hover-bg: var(--sol-oscuro);
+  --bs-btn-hover-border-color: var(--sol-oscuro);
+  --bs-btn-active-color: var(--texto);
+  --bs-btn-active-bg: var(--sol-activo);
+  --bs-btn-active-border-color: var(--sol-activo);
+  --bs-btn-focus-shadow-rgb: 242, 193, 78;
+  /* #F2C14E en R, G, B sin rgb() */
+  --bs-btn-font-weight: 700;
+}
+
+/*
+.boton {
+  display: inline-block;
+  background-color: var(--sol);
+  color: var(--texto);
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid var(--sol);
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.boton:hover {
+  background-color: #E0AC2F;
+  border-color: #E0AC2F;
+}
+
+.boton-secundario {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+  margin-left: 8px;
+}
+
+.boton-secundario:hover {
+  background-color: #fff;
+  color: var(--verde-bosque);
+  border-color: #fff;
+}
+*/
+
+/* ---------- Tarjetas con flexbox (Bootstrap: .row .col .card) ---------- */
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.tarjeta {
+  background-color: #fff;
+  border-radius: 10px;
+  border-top: 4px solid var(--verde-hoja);
+  overflow: hidden;
+  width: calc(25% - 18px);
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-imagen {
+  background-color: var(--verde-claro);
+  font-size: 4rem;
+  text-align: center;
+  padding: 24px 0;
+}
+
+.tarjeta-cuerpo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tarjeta-cuerpo h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.tarjeta-cuerpo p {
+  margin-bottom: 12px;
+}
+
+.precio {
+  font-weight: 700;
+  color: var(--verde-bosque);
+  margin-top: auto;
+}
+
+/* ---------- Columnas de consejos ---------- */
+.columnas {
+  display: flex;
+  gap: 24px;
+}
+
+.columna {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid var(--verde-claro);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.columna h3 {
+  color: var(--verde-bosque);
+  margin-bottom: 8px;
+}
+
+/* ---------- Página de contacto ---------- */
+.titulo-pagina {
+  font-size: 2.2rem;
+  color: var(--verde-bosque);
+  margin-bottom: 8px;
+}
+
+.intro {
+  margin-bottom: 32px;
+  max-width: 600px;
+}
+
+.dos-columnas {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* ---------- Formulario (Bootstrap: .form-control, .form-select...) ---------- */
+.formulario {
+  flex: 2;
+  background-color: #fff;
+  padding: 28px;
+  border-radius: 10px;
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #B9C9B9;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--verde-hoja);
+  box-shadow: 0 0 0 3px rgba(107, 163, 104, 0.3);
+}
+
+.campo-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.campo-check label {
+  display: inline;
+  font-weight: 400;
+  margin: 0;
+}
+
+.caja-info {
+  flex: 1;
+  background-color: var(--verde-bosque);
+  color: #fff;
+  padding: 28px;
+  border-radius: 10px;
+}
+
+.caja-info h2 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.caja-info p {
+  margin-bottom: 14px;
+}
+
+/* ---------- Pie de página ---------- */
+.pie {
+  background-color: var(--verde-bosque);
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 48px;
+  font-size: 0.95rem;
+}

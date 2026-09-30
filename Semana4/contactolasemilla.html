@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vivero La Semilla | Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <nav class="navbar navbar-expand-md navbar-dark navbar-vivero">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🌱 La Semilla</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#plantas">Plantas</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#consejos">Consejos</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor seccion">
+    <h1 class="titulo-pagina">Escribinos</h1>
+    <p class="intro">¿No sabés qué planta elegir? Contanos sobre tu espacio y te respondemos en menos de 24 horas.</p>
+
+    <!-- DOS COLUMNAS (se migrará a .row + .col-md-8 / .col-md-4) -->
+    <div class="dos-columnas">
+
+      <!-- FORMULARIO (se migrará a .form-label, .form-control, .form-select, .form-check) -->
+      <form class="formulario" action="#">
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Solís" required>
+        </div>
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" required>
+        </div>
+        <div class="campo">
+          <label for="tipo">Tipo de consulta</label>
+          <select id="tipo" name="tipo">
+            <option>Elegir una planta</option>
+            <option>Cuidado de una planta que ya tengo</option>
+            <option>Pedido a domicilio</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5"
+            placeholder="Describí la luz, el espacio y cuánto tiempo tenés para cuidarla."></textarea>
+        </div>
+        <div class="campo campo-check">
+          <input type="checkbox" id="boletin" name="boletin">
+          <label for="boletin">Quiero recibir consejos de cuidado una vez al mes</label>
+        </div>
+        <button type="submit" class="btn btn-vivero">Enviar consulta</button>
+      </form>
+
+      <!-- CAJA LATERAL (se migrará a .card o a utilidades) -->
+      <aside class="caja-info">
+        <h2>Visitanos</h2>
+        <p><strong>Dirección:</strong><br>200 m norte de la iglesia de Barva, Heredia.</p>
+        <p><strong>Teléfono:</strong><br>2260-1234</p>
+        <p><strong>Horario:</strong><br>Martes a domingo<br>8:00 a. m. a 5:00 p. m.</p>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>© 2026 Vivero La Semilla. Barva de Heredia, Costa Rica.</p>
+      <p>Abierto de martes a domingo, de 8:00 a. m. a 5:00 p. m.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
