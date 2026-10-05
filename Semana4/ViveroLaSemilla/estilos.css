@@ -1,0 +1,93 @@
+/* =========================================================
+   Vivero La Semilla — CSS MIGRADO A BOOTSTRAP 5
+   Sistema de grillas, espaciados y tarjetas con Bootstrap. 
+   Solo se mantienen las variables, colores
+   específicos y personalizaciones que el framework no tiene.
+   ========================================================= */
+
+:root {
+  --verde-bosque: #1F4D3A;
+  --verde-hoja: #6BA368;
+  --verde-claro: #DCEBDC;
+  --menta: #EEF5EE;
+  --sol: #F2C14E;
+  --texto: #1F2A1F;
+}
+
+body {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  color: var(--texto);
+  background-color: var(--menta);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bitter", Georgia, serif;
+}
+
+.color-bosque {
+  color: var(--verde-bosque);
+}
+
+.bg-verde-claro {
+  background-color: var(--verde-claro);
+}
+
+/* Header */
+.navbar-vivero {
+  --bs-navbar-color: rgba(255, 255, 255, 0.85);
+  --bs-navbar-hover-color: var(--sol);
+  --bs-navbar-active-color: var(--sol);
+  --bs-navbar-brand-color: #fff;
+  --bs-navbar-brand-hover-color: #fff;
+  background-color: var(--verde-bosque);
+}
+
+.navbar-vivero .navbar-brand,
+.navbar-vivero .nav-link {
+  font-weight: 700;
+}
+
+/* Portada */
+.portada {
+  background: linear-gradient(120deg, var(--verde-bosque) 0%, #2F6B4F 100%);
+  color: #fff;
+}
+
+/* Botones */
+.btn-vivero {
+  --bs-btn-color: var(--texto);
+  --bs-btn-bg: var(--sol);
+  --bs-btn-border-color: var(--sol);
+  --bs-btn-hover-color: var(--texto);
+  --bs-btn-hover-bg: #E0AC2F;
+  --bs-btn-hover-border-color: #E0AC2F;
+  --bs-btn-active-color: var(--texto);
+  --bs-btn-active-bg: #D4A02A;
+  --bs-btn-active-border-color: #D4A02A;
+  --bs-btn-focus-shadow-rgb: 242, 193, 78;
+  --bs-btn-font-weight: 700;
+}
+
+/* cards */
+.tarjeta-vivero {
+  border: none;
+  border-top: 4px solid var(--verde-hoja);
+}
+
+.precio {
+  font-weight: 700;
+  color: var(--verde-bosque);
+}
+
+/* cajas de consejos */
+.card.consejo-caja,
+.consejo-caja {
+    border-color: var(--verde-claro); 
+}
+
+/* footer */
+.footer {
+  background-color: var(--verde-bosque);
+}
