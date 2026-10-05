@@ -1,0 +1,22 @@
+@use 'variables.scss' as var;
+@use 'funciones.scss' as fun;
+@use 'mixins.scss' as mix;
+
+.estado-proyecto {
+    background-color: var.$fondo-normal;
+    border-left: 6px solid var.$color-principal;
+    @include mix.caja-estado;
+
+    h2 {
+        color: var.$color-titulo;
+    }
+
+    &.urgente {
+        background-color: var.$fondo-urgente;
+        border-left: 6px solid var.$color-urgente;
+
+        h2 {
+            color: var.$color-urgente-titulo;
+        }
+    }
+}

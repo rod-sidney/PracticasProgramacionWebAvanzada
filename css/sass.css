@@ -1,0 +1,21 @@
+/* estilos */
+/*variables*/
+/* funciones */
+.estado-proyecto {
+  background-color: #f3e8ff;
+  border-left: 6px solid #6f42c1;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.estado-proyecto h2 {
+  color: #c142bb;
+}
+.estado-proyecto.urgente {
+  background-color: #f8d7da;
+  border-left: 6px solid #dc3545;
+}
+.estado-proyecto.urgente h2 {
+  color: #740c16;
+}
+
+/*# sourceMappingURL=sass.css.map */

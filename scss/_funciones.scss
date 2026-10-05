@@ -1,0 +1,6 @@
+@use 'variables.scss' as var;
+
+/* funciones */
+@function espacio($cantidad) {
+    @return $cantidad * var.$espacio-base;
+}

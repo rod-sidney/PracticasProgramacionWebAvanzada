@@ -1,0 +1,7 @@
+@use 'variables.scss' as var;
+@use 'funciones.scss' as fun;
+
+@mixin caja-estado {
+    border-radius: var.$radio;
+    padding: fun.espacio(3);
+}

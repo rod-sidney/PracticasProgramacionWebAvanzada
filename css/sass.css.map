@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/estilos.scss","../scss/_variables.scss","../scss/_funciones.scss","../scss/_componentes.scss","../scss/_mixins.scss"],"names":[],"mappings":"AAAA;ACAA;ACEA;ACEA;EACI,kBFFW;EEGX;ECFA,eHII;EGHJ;;ADIA;EACI,OFJO;;AEOX;EACI,kBFTQ;EEUR;;AAEA;EACI,OFXW","file":"sass.css"}
