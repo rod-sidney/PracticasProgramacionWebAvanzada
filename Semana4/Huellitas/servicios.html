@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - Huellitas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-huellitas">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🐾 Huellitas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="servicios.html#precios">Precios</a></li>
+              <li><a class="dropdown-item" href="servicios.html#preguntas">Preguntas frecuentes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="citas.html">Agendar cita</a></li>
+          <li class="nav-item"><a class="btn btn-huellitas btn-sm" href="tel:22223344">Urgencias</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tarea E -->
+  <main class="container py-5">
+    <h1 class="display-6 mb-2">Nuestros Servicios</h1>
+    <p class="mb-4 intro">Ofrecemos atención integral para tu mascota con los mejores especialistas y equipos.</p>
+
+    <!-- Tarea E1 -->
+    <section id="precios">
+      <h2 class="mb-3">Precios base</h2>
+      <div class="table-responsive mb-5">
+        <table class="table table-striped table-hover align-middle text-nowrap tabla-huellitas">
+          <thead>
+            <tr>
+              <th scope="col">Servicio</th>
+              <th scope="col">Perro</th>
+              <th scope="col">Gato</th>
+              <th scope="col">Duración</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Consulta general</td>
+              <td>₡20 000</td>
+              <td>₡18 000</td>
+              <td>45 min</td>
+            </tr>
+            <tr>
+              <td>Baño y corte <span class="badge rounded-pill text-bg-coral">Promo</span></td>
+              <td>Desde ₡15 000</td>
+              <td>Desde ₡12 000</td>
+              <td>90 min</td>
+            </tr>
+            <tr>
+              <td>Vacuna múltiple</td>
+              <td>₡12 000</td>
+              <td>₡12 000</td>
+              <td>15 min</td>
+            </tr>
+            <tr>
+              <td>Limpieza dental <span class="badge rounded-pill text-bg-turquesa">Nuevo</span></td>
+              <td>₡35 000</td>
+              <td>₡30 000</td>
+              <td>120 min</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Tarea E2 -->
+    <section id="preguntas">
+      <h2 class="mb-3">Preguntas frecuentes</h2>
+      <div class="accordion accordion-huellitas" id="acordeonPreguntas">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#p1"
+              aria-expanded="true" aria-controls="p1">
+              ¿Necesito cita para una urgencia?
+            </button>
+          </h3>
+          <div id="p1" class="accordion-collapse collapse show" data-bs-parent="#acordeonPreguntas">
+            <div class="accordion-body">
+              No. Las urgencias se atienden por orden de gravedad, las 24 horas. Si podés, llamá antes al 2222-3344 para
+              que te esperemos.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p2"
+              aria-expanded="false" aria-controls="p2">
+              ¿Aceptan tarjetas de crédito?
+            </button>
+          </h3>
+          <div id="p2" class="accordion-collapse collapse" data-bs-parent="#acordeonPreguntas">
+            <div class="accordion-body">
+              Sí, aceptamos todas las tarjetas de crédito y débito, además de SINPE Móvil.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p3"
+              aria-expanded="false" aria-controls="p3">
+              ¿Qué incluye el baño y corte?
+            </button>
+          </h3>
+          <div id="p3" class="accordion-collapse collapse" data-bs-parent="#acordeonPreguntas">
+            <div class="accordion-body">
+              Incluye baño con champú especial, corte de pelo, limpieza de oídos, corte de uñas y secado.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p4"
+              aria-expanded="false" aria-controls="p4">
+              ¿Puedo dejar a mi mascota todo el día?
+            </button>
+          </h3>
+          <div id="p4" class="accordion-collapse collapse" data-bs-parent="#acordeonPreguntas">
+            <div class="accordion-body">
+              Ofrecemos servicio de guardería de 7 a. m. a 6 p. m. Tiene un costo adicional al servicio veterinario.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-huellitas text-center text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-1">© 2026 Clínica Veterinaria Huellitas. Curridabat, San José.</p>
+      <p class="mb-0 small">Teléfono 2222-3344. Urgencias las 24 horas.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

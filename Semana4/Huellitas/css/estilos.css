@@ -1,0 +1,189 @@
+/* =========================================================================
+   TAREA G: PERSONALIZACIONES REALIZADAS
+   1. Tipografías de la clínica: En :root y reglas para h1, h2, etc.
+   2. Menú desplegable y enlaces navbar: En .navbar-huellitas.
+   3. Elemento activo del horario en turquesa: En .horario.
+   4. Encabezado modal turquesa: En .modal-huellitas.
+   5. Badges de clínica: Clases .text-bg-coral y .text-bg-turquesa.
+   ========================================================================= */
+
+/* Variables Globales y Tipografía (Tarea G1) */
+:root {
+  --turquesa: #0F6E75;
+  --turquesa-oscuro: #0b5055;
+  --coral: #FF7A59;
+  --naranja-oscuro: #CF4E30;
+  --naranja-claro: #e8603f;
+  --celeste: #b3ebf0;
+
+  --gris: #444;
+
+  /* Tipografía (Tarea G, Técnica A) */
+  --bs-body-font-family: "Source Sans 3", system-ui, sans-serif;
+}
+
+/* Tipografía de títulos (Tarea G, Técnica C y B) */
+h1,
+h2,
+h3,
+legend,
+.h4,
+.h5,
+.navbar-brand {
+  font-family: "Baloo 2", system-ui, sans-serif !important;
+  font-weight: 700;
+}
+
+/* Restricción de ancho */
+.intro {
+  max-width: 800px;
+}
+
+/* Navbar y Dropdown (Tarea C y G2) */
+.navbar-huellitas {
+  border-bottom: 3px solid var(--turquesa);
+  /* Colores de marca y navbar */
+  --bs-navbar-brand-color: var(--turquesa);
+  --bs-navbar-brand-hover-color: var(--turquesa-oscuro);
+  --bs-navbar-color: var(--gris);
+  --bs-navbar-hover-color: var(--turquesa);
+  --bs-navbar-active-color: var(--turquesa);
+}
+
+.navbar-huellitas .navbar-brand {
+  font-size: 1.6rem;
+}
+
+.navbar-huellitas .dropdown-menu {
+  /* (Tarea G, Técnica A) */
+  --bs-dropdown-link-hover-bg: var(--celeste);
+  --bs-dropdown-link-active-bg: var(--turquesa);
+  --bs-dropdown-border-color: var(--turquesa);
+}
+
+/* Componentes Personalizados (Tarea B, D1, D2) */
+
+/* Botón Huellitas (B) */
+.btn-huellitas {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--naranja-oscuro);
+  --bs-btn-border-color: var(--naranja-oscuro);
+
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--naranja-claro);
+  --bs-btn-hover-border-color: var(--naranja-claro);
+
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--naranja-oscuro);
+  --bs-btn-active-border-color: var(--naranja-oscuro);
+
+  --bs-btn-focus-shadow-rgb: 255, 122, 89;
+  --bs-btn-border-radius: 2rem;
+  --bs-btn-font-weight: 700;
+  --bs-btn-padding-x: 1.5rem;
+}
+
+/* Alert Aviso Urgencias (D1) */
+.alert-huellitas {
+  --bs-alert-bg: #FFE8E1;
+  --bs-alert-color: #8A2E17;
+  --bs-alert-border-color: #FFE8E1;
+}
+
+/* Carrusel y Promos (D2) */
+.carrusel-huellitas .carousel-item {
+  min-height: 340px;
+  color: #fff;
+}
+
+.carrusel-huellitas h1,
+.carrusel-huellitas h2 {
+  color: #fff;
+}
+
+.promo-1 {
+  background-color: var(--turquesa);
+}
+
+.promo-2 {
+  background-color: var(--coral);
+}
+
+.promo-3 {
+  background-color: var(--turquesa-oscuro);
+}
+
+/* Grid, Tarjetas e Info (Tarea D3, D4 y F6) */
+
+/* Razones (D3) */
+.razon {
+  background-color: var(--celeste);
+}
+
+/* Horario de Atención (D4 y G3) */
+.horario {
+  --bs-list-group-active-bg: var(--turquesa);
+  --bs-list-group-active-border-color: var(--turquesa);
+}
+
+/* Caja de Info Qué traer (F6) */
+.caja-info {
+  --bs-card-bg: var(--celeste);
+  border: none;
+}
+
+.caja-info .list-group {
+  --bs-list-group-bg: transparent;
+}
+
+/* SERVICIOS (Tarea E1 y E2) */
+
+/* Tabla Huellitas (E1) */
+.tabla-huellitas {
+  --bs-table-bg: var(--celeste);
+  justify-content: center; 
+  align-items: center;
+}
+
+/* Acordeón Preguntas (E2) */
+.accordion-huellitas {
+  --bs-accordion-active-bg: var(--celeste);
+  --bs-accordion-active-color: var(--turquesa);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 .25rem rgba(15, 110, 117, .25);
+}
+
+/* FORMS Y MODALS (Tarea F1, F5 y G4) */
+
+/* Alert de Citas (F1) */
+.alert-cita {
+  --bs-alert-bg: var(--celeste);
+  --bs-alert-color: var(--turquesa-oscuro);
+  --bs-alert-border-color: var(--turquesa);
+  border-left: 5px solid var(--turquesa);
+}
+
+/* Modal Política de cancelación (F5 y G4) */
+.modal-huellitas .modal-header {
+  background-color: var(--turquesa);
+  border-bottom: none;
+}
+
+.modal-huellitas .modal-title {
+  color: #fff;
+}
+
+/* footer */
+.footer-huellitas {
+  background-color: var(--turquesa-oscuro);
+}
+
+/* Tarea G5 */
+.text-bg-coral {
+  background-color: var(--coral);
+  color: #fff;
+}
+
+.text-bg-turquesa {
+  background-color: var(--turquesa);
+  color: #fff;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitudes de soporte</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <main class="contenedor">
+    <section class="tarjeta">
+      <header class="encabezado">
+        <span class="etiqueta">Mesa de ayuda</span>
+        <h1>Registro de solicitudes</h1>
+        <p>Complete la información para registrar una nueva solicitud de soporte.</p>
+      </header>
+
+      <form id="formSolicitud" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Ej. Ana Rodríguez">
+          <span class="error" id="errorNombre"></span>
+        </div>
+
+        <div class="campo">
+          <label for="departamento">Departamento</label>
+          <select id="departamento">
+            <option value="">Seleccione un departamento</option>
+            <option value="Administración">Administración</option>
+            <option value="Finanzas">Finanzas</option>
+            <option value="Recursos Humanos">Recursos Humanos</option>
+            <option value="Tecnología">Tecnología</option>
+            <option value="Ventas">Ventas</option>
+          </select>
+          <span class="error" id="errorDepartamento"></span>
+        </div>
+
+        <div class="campo">
+          <label for="tipoProblema">Tipo de problema</label>
+          <select id="tipoProblema">
+            <option value="">Seleccione un problema</option>
+            <option value="Hardware">Hardware</option>
+            <option value="Software">Software</option>
+            <option value="Red">Red</option>
+            <option value="Acceso">Acceso</option>
+            <option value="Otro">Otro</option>
+          </select>
+          <span class="error" id="errorTipo"></span>
+        </div>
+
+        <div class="campo">
+          <label for="prioridad">Prioridad</label>
+          <select id="prioridad">
+            <option value="">Seleccione una prioridad</option>
+            <option value="Baja">Baja</option>
+            <option value="Media">Media</option>
+            <option value="Alta">Alta</option>
+          </select>
+          <span class="error" id="errorPrioridad"></span>
+        </div>
+
+        <div class="campo">
+          <label for="descripcion">Descripción</label>
+          <textarea id="descripcion" rows="4" placeholder="Describa brevemente el problema"></textarea>
+          <span class="error" id="errorDescripcion"></span>
+        </div>
+
+        <button type="submit">Registrar solicitud</button>
+      </form>
+    </section>
+
+    <section class="tarjeta resultados">
+      <div class="titulo-lista">
+        <div>
+          <span class="etiqueta">Registros</span>
+          <h2>Solicitudes registradas</h2>
+        </div>
+        <span id="contador">0 solicitudes</span>
+      </div>
+      <div id="listaSolicitudes">
+        <p class="sin-datos">No existen solicitudes registradas.</p>
+      </div>
+    </section>
+
+    <section class="tarjeta json">
+      <span class="etiqueta">JSON generado</span>
+      <h2>Información almacenada</h2>
+      <pre id="salidaJSON">[]</pre>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
